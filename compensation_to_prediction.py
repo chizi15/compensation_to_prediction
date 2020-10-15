@@ -50,40 +50,40 @@ for i in range(0, len(length)):
     y_input_add_actual[i] = pd.Series(y_input_add_actual[i]).rename('y_input_add_actual')
     # y_input_add_actual[i][y_input_add_actual[i] < 0] = 0
 
-# # 绘制加法季节性时间序列；xlim让每条折线图填充满x坐标轴
-# plt.figure('add_actual_pred: 14+7', figsize=(5, 10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# y_input_add_actual[0].plot(ax=ax1, legend=True)
-# y_level_actual[0].plot(ax=ax2, legend=True)
-# y_trend_actual[0].plot(ax=ax3, legend=True)
-# y_season_actual[0].plot(ax=ax4, legend=True)
-# y_noise_actual[0].plot(ax=ax5, legend=True)
-#
-# plt.figure('add_actual_pred: 4+1', figsize=(5, 10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# y_input_add_actual[1].plot(ax=ax1, legend=True)
-# y_level_actual[1].plot(ax=ax2, legend=True)
-# y_trend_actual[1].plot(ax=ax3, legend=True)
-# y_season_actual[1].plot(ax=ax4, legend=True)
-# y_noise_actual[1].plot(ax=ax5, legend=True)
+# 绘制加法季节性时间序列；xlim让每条折线图填充满x坐标轴
+plt.figure('add_actual_pred: 14+7', figsize=(5, 10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+y_input_add_actual[0].plot(ax=ax1, legend=True)
+y_level_actual[0].plot(ax=ax2, legend=True)
+y_trend_actual[0].plot(ax=ax3, legend=True)
+y_season_actual[0].plot(ax=ax4, legend=True)
+y_noise_actual[0].plot(ax=ax5, legend=True)
+
+plt.figure('add_actual_pred: 4+1', figsize=(5, 10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+y_input_add_actual[1].plot(ax=ax1, legend=True)
+y_level_actual[1].plot(ax=ax2, legend=True)
+y_trend_actual[1].plot(ax=ax3, legend=True)
+y_season_actual[1].plot(ax=ax4, legend=True)
+y_noise_actual[1].plot(ax=ax5, legend=True)
 
 ##########################################################--构造乘法周期性时间序列，模拟真实销售
 y_level_actual, y_trend_actual, y_season_actual, y_noise_actual, y_input_mul_actual = [[]] * len(length), [[]] * len(length), [[]] * len(length), [[]] * len(length), [[]] * len(length)
@@ -111,40 +111,40 @@ for i in range(0, len(length)):
     y_input_mul_actual[i] = pd.Series(y_input_mul_actual[i]).rename('y_input_mul_actual')
     # y_input_mul_actual[i][y_input_mul_actual[i] < 0] = 0
 
-# # 绘制四条乘法季节性时间序列；xlim让每条折线图填充满x坐标轴
-# plt.figure('mul_actual_pred: 14+7', figsize=(5,10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# y_input_mul_actual[0].plot(ax=ax1, legend=True)
-# y_level_actual[0].plot(ax=ax2, legend=True)
-# y_trend_actual[0].plot(ax=ax3, legend=True)
-# y_season_actual[0].plot(ax=ax4, legend=True)
-# y_noise_actual[0].plot(ax=ax5, legend=True)
-#
-# plt.figure('mul_actual_pred: 4+1', figsize=(5,10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# y_input_mul_actual[1].plot(ax=ax1, legend=True)
-# y_level_actual[1].plot(ax=ax2, legend=True)
-# y_trend_actual[1].plot(ax=ax3, legend=True)
-# y_season_actual[1].plot(ax=ax4, legend=True)
-# y_noise_actual[1].plot(ax=ax5, legend=True)
+# 绘制四条乘法季节性时间序列；xlim让每条折线图填充满x坐标轴
+plt.figure('mul_actual_pred: 14+7', figsize=(5,10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+y_input_mul_actual[0].plot(ax=ax1, legend=True)
+y_level_actual[0].plot(ax=ax2, legend=True)
+y_trend_actual[0].plot(ax=ax3, legend=True)
+y_season_actual[0].plot(ax=ax4, legend=True)
+y_noise_actual[0].plot(ax=ax5, legend=True)
+
+plt.figure('mul_actual_pred: 4+1', figsize=(5,10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+y_input_mul_actual[1].plot(ax=ax1, legend=True)
+y_level_actual[1].plot(ax=ax2, legend=True)
+y_trend_actual[1].plot(ax=ax3, legend=True)
+y_season_actual[1].plot(ax=ax4, legend=True)
+y_noise_actual[1].plot(ax=ax5, legend=True)
 
 
 ##########################################################--构造加法周期性时间序列，模拟预测销售
@@ -175,40 +175,40 @@ for i in range(0, len(length)):
     y_input_add_pred[i] = pd.Series(y_input_add_pred[i]).rename('y_input_add_pred')
     # y_input_add_pred[i][y_input_add_pred[i] < 0] = 0
 
-# # 绘制加法季节性时间序列；xlim让每条折线图填充满x坐标轴
-# plt.figure('add_actual_pred: 14+7', figsize=(5, 10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# y_input_add_pred[0].plot(ax=ax1, legend=True)
-# y_level_pred[0].plot(ax=ax2, legend=True)
-# y_trend_pred[0].plot(ax=ax3, legend=True)
-# y_season_pred[0].plot(ax=ax4, legend=True)
-# y_noise_pred[0].plot(ax=ax5, legend=True)
-#
-# plt.figure('add_actual_pred: 4+1', figsize=(5, 10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# y_input_add_pred[1].plot(ax=ax1, legend=True)
-# y_level_pred[1].plot(ax=ax2, legend=True)
-# y_trend_pred[1].plot(ax=ax3, legend=True)
-# y_season_pred[1].plot(ax=ax4, legend=True)
-# y_noise_pred[1].plot(ax=ax5, legend=True)
+# 绘制加法季节性时间序列；xlim让每条折线图填充满x坐标轴
+plt.figure('add_actual_pred: 14+7', figsize=(5, 10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+y_input_add_pred[0].plot(ax=ax1, legend=True)
+y_level_pred[0].plot(ax=ax2, legend=True)
+y_trend_pred[0].plot(ax=ax3, legend=True)
+y_season_pred[0].plot(ax=ax4, legend=True)
+y_noise_pred[0].plot(ax=ax5, legend=True)
+
+plt.figure('add_actual_pred: 4+1', figsize=(5, 10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+y_input_add_pred[1].plot(ax=ax1, legend=True)
+y_level_pred[1].plot(ax=ax2, legend=True)
+y_trend_pred[1].plot(ax=ax3, legend=True)
+y_season_pred[1].plot(ax=ax4, legend=True)
+y_noise_pred[1].plot(ax=ax5, legend=True)
 
 ##########################################################--构造乘法周期性时间序列，模拟预测销售
 y_level_pred, y_trend_pred, y_season_pred, y_noise_pred, y_input_mul_pred = [[]] * len(length), [[]] * len(length), [[]] * len(length), [[]] * len(length), [[]] * len(length)
@@ -236,55 +236,56 @@ for i in range(0, len(length)):
     y_input_mul_pred[i] = pd.Series(y_input_mul_pred[i]).rename('y_input_mul_pred')
     # y_input_mul_pred[i][y_input_mul_pred[i] < 0] = 0
 
-# # 绘制四条乘法季节性时间序列；xlim让每条折线图填充满x坐标轴
-# plt.figure('mul_actual_pred: 14+7', figsize=(5,10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[0]-1)
-# y_input_mul_pred[0].plot(ax=ax1, legend=True)
-# y_level_pred[0].plot(ax=ax2, legend=True)
-# y_trend_pred[0].plot(ax=ax3, legend=True)
-# y_season_pred[0].plot(ax=ax4, legend=True)
-# y_noise_pred[0].plot(ax=ax5, legend=True)
-#
-# plt.figure('mul_actual_pred: 4+1', figsize=(5,10))
-# ax1 = plt.subplot(5,1,1)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax2 = plt.subplot(5,1,2)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax3 = plt.subplot(5,1,3)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax4 = plt.subplot(5,1,4)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# ax5 = plt.subplot(5,1,5)
-# xlim = plt.gca().set_xlim(0, length[1]-1)
-# y_input_mul_pred[1].plot(ax=ax1, legend=True)
-# y_level_pred[1].plot(ax=ax2, legend=True)
-# y_trend_pred[1].plot(ax=ax3, legend=True)
-# y_season_pred[1].plot(ax=ax4, legend=True)
-# y_noise_pred[1].plot(ax=ax5, legend=True)
+# 绘制四条乘法季节性时间序列；xlim让每条折线图填充满x坐标轴
+plt.figure('mul_actual_pred: 14+7', figsize=(5,10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[0]-1)
+y_input_mul_pred[0].plot(ax=ax1, legend=True)
+y_level_pred[0].plot(ax=ax2, legend=True)
+y_trend_pred[0].plot(ax=ax3, legend=True)
+y_season_pred[0].plot(ax=ax4, legend=True)
+y_noise_pred[0].plot(ax=ax5, legend=True)
+
+plt.figure('mul_actual_pred: 4+1', figsize=(5,10))
+ax1 = plt.subplot(5,1,1)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax2 = plt.subplot(5,1,2)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax3 = plt.subplot(5,1,3)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax4 = plt.subplot(5,1,4)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+ax5 = plt.subplot(5,1,5)
+xlim = plt.gca().set_xlim(0, length[1]-1)
+y_input_mul_pred[1].plot(ax=ax1, legend=True)
+y_level_pred[1].plot(ax=ax2, legend=True)
+y_trend_pred[1].plot(ax=ax3, legend=True)
+y_season_pred[1].plot(ax=ax4, legend=True)
+y_noise_pred[1].plot(ax=ax5, legend=True)
 
 
-def compensation(hist_actual, hist_pred, pred, j, steps_day=7):
+def compensation(hist_actual, hist_pred, pred, j, period=7, steps_day=7):
     """
     :param hist_actual: 近期理论销售历史值，任何一维数据，转化为pd.Series，为了作图观察
-    :param hist_pred: 近期预测销售历史值，任何一维数据，转化为pd.Series，为了作图观察
-    :param pred: 未来7天预测值，加载加权r和效应系数，但不加载补偿量，任何一维数据，转化为pd.Series，为了作图观察
+    :param hist_pred: 近期倒数第二次预测值，加载老r、效应系数、新r，但不加载补偿量，任何一维数据，转化为pd.Series，为了作图观察
+    :param pred: 未来7天的倒数第二次预测值，加载老r、效应系数、新r，但不加载补偿量，任何一维数据，转化为pd.Series，为了作图观察
+    :param j: 输入的测试数据的索引号，是第几组
+    :param period: HoltWinter方法的周期
     :param steps_day: 预测天数
     :return: 加载补偿量的最终预测值，np.array，使其无索引
     """
-    hist_actual = pd.Series(hist_actual)
-    hist_pred = pd.Series(hist_pred)
-    pred = pd.Series(pred)
+    hist_actual = pd.Series(hist_actual[:29])
+    hist_pred = pd.Series(hist_pred[:29])
+    pred = pd.Series(pred[:steps_day])
     deviation = hist_pred - hist_actual
-    deviation = deviation[:29]
     weights = []
     for i in range(1, len(deviation)+1):
         weights.append(i / len(deviation))
@@ -345,21 +346,49 @@ def compensation(hist_actual, hist_pred, pred, j, steps_day=7):
         Holt_add_dam_train.forecast(steps_day).rename('Holt_add_dam_train').plot(ax=ax_Holt, color='red', legend=True)
 
 
-        pred = np.array(pred)  # pd.Series是按对应索引进行运算，np.array是按对应顺序进行运算
         # 总补偿量为正，则按预测值的正比重新分配每步补偿量，总补偿量为负，则按预测值的反比重新分配每步补偿量；使补偿后的预测值更加稳定，并在多步补偿的情况下与实际值更接近。
+        pred = np.array(pred)  # pd.Series是按对应索引进行运算，np.array是按对应顺序进行运算
         ratio_posi = pred / sum(pred)
         ratio_posi[ratio_posi < 1 / (7 * 3)] = 1 / (7 * 3)
         ratio_posi = ratio_posi / sum(ratio_posi)
-        ratio_neg = 1/2 * (1 - ratio_posi) / sum(1 - ratio_posi) + 1/2 * (1/ratio_posi) / sum(1/ratio_posi)
+        ratio_neg = 1 / 2 * (1 - ratio_posi) / sum(1 - ratio_posi) + 1 / 2 * (1 / ratio_posi) / sum(1 / ratio_posi)
         ratio_neg[ratio_neg < 1 / (7 * 3)] = 1 / (7 * 3)
         ratio_neg = ratio_neg / sum(ratio_neg)
-        total_compensation = sum(1/5 * np.average(np.array(fit_SES.forecast(steps_day)).reshape(-1, 1) + np.array(fit_SES_train.forecast(steps_day)).reshape(-1 ,1), axis=1)
-                             + 4/5 * np.average(np.array(Holt_add_dam.forecast(steps_day)).reshape(-1, 1) + np.array(Holt_add_dam_train.forecast(steps_day)).reshape(-1, 1), axis=1))
+        total_compensation = sum(4 / 5 * np.average(
+            np.column_stack([np.array(Holt_add_dam.forecast(steps_day)).reshape(-1, 1), np.array(
+                Holt_add_dam_train.forecast(steps_day)).reshape(-1, 1)]), axis=1) + 1 / 5 * np.average(
+            np.column_stack([np.array(fit_SES.forecast(steps_day)).reshape(-1, 1), np.array(
+                fit_SES_train.forecast(steps_day)).reshape(-1, 1)]), axis=1))
         if total_compensation >= 0:
             every_compensation = total_compensation * ratio_posi
         else:
             every_compensation = total_compensation * ratio_neg
         final_pred = pred - every_compensation
+
+        # 检查最终预测值
+        print('sum of ratio_posi and ratio_neg:', sum(ratio_posi), sum(ratio_neg), '\n')
+        print('Holt_add_dam.forecast(steps_day):', '\n', Holt_add_dam.forecast(steps_day), '\n')
+        print('Holt_add_dam_train.forecast(steps_day):', '\n', Holt_add_dam_train.forecast(steps_day), '\n')
+        print('fit_SES.forecast(steps_day):', '\n', fit_SES.forecast(steps_day), '\n')
+        print('fit_SES_train.forecast(steps_day):', '\n', fit_SES_train.forecast(steps_day), '\n')
+        print('average compensation of every step:', total_compensation / 7, '\n')
+        print('every_compensation:', '\n', every_compensation, '\n')
+
+        # 对最终预测值作图
+        plt.figure('[4, 14]_final_pred', figsize=(20, 10))
+        ax_SESHolt = pd.Series(final_pred, index=range(len(deviation), len(deviation) + steps_day)).rename(
+            'final_pred').plot(color='k', legend=True)
+        ax_SESHolt.set_ylabel("amount")
+        ax_SESHolt.set_xlabel("day")
+        xlim = plt.gca().set_xlim(0, length[j] - 1)
+        pd.Series(pred, index=range(len(deviation), len(deviation) + steps_day)).rename('pred').plot(ax=ax_SESHolt,
+                                                                                                     color='r',
+                                                                                                     legend=True)
+        hist_pred.rename('hist_pred').plot(ax=ax_SESHolt, color='r', legend=True)
+        hist_actual.rename('hist_actual').plot(ax=ax_SESHolt, color='b', legend=True)
+        pd.Series(every_compensation, index=range(len(deviation), len(deviation) + steps_day)).rename(
+            'every_compensation').plot(ax=ax_SESHolt,
+                                       color='g', legend=True)
 
     else:
         # Holt
@@ -417,17 +446,17 @@ def compensation(hist_actual, hist_pred, pred, j, steps_day=7):
         # HoltWinters
         # fit models
         HW_add_add_dam = ExponentialSmoothing(deviation, trend='add', damped_trend=True,
-                                              seasonal='add', seasonal_periods=7, initialization_method='known',
+                                              seasonal='add', seasonal_periods=period, initialization_method='known',
         initial_level = np.average(deviation, weights=weights),
         initial_trend = np.array((sum(deviation[int(np.ceil(len(deviation) / 2)):]) - sum(deviation[:int(np.floor(len(deviation) / 2))])) / (np.floor(len(deviation) / 2)) ** 2),
-        initial_seasonal=np.array(deviation[:len(deviation) // 7 * 7]).reshape(-1, 7).mean(axis=0) - np.average(deviation, weights=weights)). \
+        initial_seasonal=np.array(deviation[:len(deviation) // period * period]).reshape(-1, period).mean(axis=0) - np.average(deviation, weights=weights)). \
             fit(optimized=False, smoothing_level=1/10, smoothing_trend=1/10, smoothing_seasonal=1/2, damping_trend=0.90,
                 use_boxcox=False, remove_bias=False)
         HW_add_add_dam_train = ExponentialSmoothing(deviation, trend='add', damped_trend=True, seasonal='add',
-                                                    seasonal_periods=7, initialization_method='known',
+                                                    seasonal_periods=period, initialization_method='known',
         initial_level = np.average(deviation, weights=weights),
         initial_trend = np.array((sum(deviation[int(np.ceil(len(deviation) / 2)):]) - sum(deviation[:int(np.floor(len(deviation) / 2))])) / (np.floor(len(deviation) / 2)) ** 2),
-        initial_seasonal=np.array(deviation[:len(deviation) // 7 * 7]).reshape(-1, 7).mean(axis=0) - np.average(deviation, weights=weights)). \
+        initial_seasonal=np.array(deviation[:len(deviation) // period * period]).reshape(-1, period).mean(axis=0) - np.average(deviation, weights=weights)). \
             fit(optimized=True, method='TNC', damping_trend=0.90, use_brute=True,
                 use_boxcox=False, remove_bias=False)
 
@@ -472,8 +501,8 @@ def compensation(hist_actual, hist_pred, pred, j, steps_day=7):
         print(HW_add_add_dam_train_residual, '\n')
 
 
-        pred = np.array(pred)  # pd.Series是按对应索引进行运算，np.array是按对应顺序进行运算
         # 总补偿量为正，则按预测值的正比重新分配每步补偿量，总补偿量为负，则按预测值的反比重新分配每步补偿量；使补偿后的预测值更加稳定，并在多步补偿的情况下与实际值更接近。
+        pred = np.array(pred)  # pd.Series是按对应索引进行运算，np.array是按对应顺序进行运算
         ratio_posi = pred / sum(pred)
         ratio_posi[ratio_posi < 1 / (7 * 3)] = 1 / (7 * 3)
         ratio_posi = ratio_posi / sum(ratio_posi)
@@ -481,16 +510,35 @@ def compensation(hist_actual, hist_pred, pred, j, steps_day=7):
         ratio_neg[ratio_neg < 1 / (7 * 3)] = 1 / (7 * 3)
         ratio_neg = ratio_neg / sum(ratio_neg)
         total_compensation = sum(1 / 2 * np.average(
-            np.array(Holt_add_dam.forecast(steps_day)).reshape(-1, 1) + np.array(
-                Holt_add_dam_train.forecast(steps_day)).reshape(-1, 1), axis=1)
-                             + 1 / 2 * np.average(
-                    np.array(HW_add_add_dam.forecast(steps_day)).reshape(-1, 1) + np.array(
-                        HW_add_add_dam_train.forecast(steps_day)).reshape(-1, 1), axis=1))
+            np.column_stack([np.array(Holt_add_dam.forecast(steps_day)).reshape(-1, 1), np.array(
+                Holt_add_dam_train.forecast(steps_day)).reshape(-1, 1)]), axis=1) + 1 / 2 * np.average(
+                    np.column_stack([np.array(HW_add_add_dam.forecast(steps_day)).reshape(-1, 1), np.array(
+                        HW_add_add_dam_train.forecast(steps_day)).reshape(-1, 1)]), axis=1))
         if total_compensation >= 0:
             every_compensation = total_compensation * ratio_posi
         else:
             every_compensation = total_compensation * ratio_neg
         final_pred = pred - every_compensation
+
+        print('sum of ratio_posi and ratio_neg:', sum(ratio_posi), sum(ratio_neg), '\n')
+        print('Holt_add_dam.forecast(steps_day):', '\n', Holt_add_dam.forecast(steps_day), '\n')
+        print('Holt_add_dam_train.forecast(steps_day):', '\n', Holt_add_dam_train.forecast(steps_day), '\n')
+        print('HW_add_add_dam.forecast(steps_day):', '\n', HW_add_add_dam.forecast(steps_day), '\n')
+        print('HW_add_add_dam_train.forecast(steps_day):', '\n', HW_add_add_dam_train.forecast(steps_day), '\n')
+        print('average compensation of every step:', total_compensation/7, '\n')
+        print('every_compensation:', '\n', every_compensation, '\n')
+        
+        plt.figure('[15, 29]_final_pred', figsize=(20, 10))
+        ax_HoltWinters = pd.Series(final_pred, index=range(len(deviation), len(deviation) + steps_day)).rename('final_pred').plot(color='k', legend=True)
+        ax_HoltWinters.set_ylabel("amount")
+        ax_HoltWinters.set_xlabel("day")
+        xlim = plt.gca().set_xlim(0, length[j] - 1)
+        pd.Series(pred, index=range(len(deviation), len(deviation) + steps_day)).rename('pred').plot(ax=ax_HoltWinters,
+            color='r', legend=True)
+        hist_pred.rename('hist_pred').plot(ax=ax_HoltWinters, color='r', legend=True)
+        hist_actual.rename('hist_actual').plot(ax=ax_HoltWinters, color='b', legend=True)
+        pd.Series(every_compensation, index=range(len(deviation), len(deviation) + steps_day)).rename('every_compensation').plot(ax=ax_HoltWinters,
+            color='g', legend=True)
 
     return final_pred
 
